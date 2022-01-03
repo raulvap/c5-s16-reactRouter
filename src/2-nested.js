@@ -1,21 +1,25 @@
-import { Switch, Route, Link, useRouteMatch, useParams } from 'react-router-dom'
+// Clase 140: usando Params, useReouteMatch para rutas variables
+
+import {
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams,
+} from "react-router-dom";
 
 const Proyecto = () => {
-  const params = useParams()
-  const match = useRouteMatch() // no devuelve la ruta del proyecto, devuelve la ruta del componente!!
+  const params = useParams();
+  const match = useRouteMatch(); // no devuelve la ruta del proyecto, devuelve la ruta del componente!!
 
-  console.log({ params, match })
-  return (
-    <p>
-      proyecto...
-    </p>
-  )
-}
+  console.log({ params, match });
+  return <p>proyecto...</p>;
+};
 
 const Portafolio = () => {
-  const match = useRouteMatch()
-  const params = useParams() // mostrar que no se obtienen los parametros de la ruta, si no que del componente siempre que este acepte con el componente de Route
-  console.log({ match, params }, 'lala')
+  const match = useRouteMatch();
+  const params = useParams(); // mostrar que no se obtienen los parametros de la ruta, si no que del componente siempre que este acepte con el componente de Route
+  console.log({ match, params }, "lala");
 
   return (
     <div>
@@ -40,8 +44,8 @@ const Portafolio = () => {
         </Switch>
       </div>
     </div>
-  )
-}
+  );
+};
 function App() {
   return (
     <div>
